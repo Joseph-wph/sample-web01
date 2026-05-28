@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Website01</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind v4 Theme -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-inter: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-inter">
+    <!-- navbar -->
+    <nav class="container mx-auto p-10">
+      <!-- TOP NAV -->
+      <div class="relative flex justify-between items-center">
+        <!-- LOGO -->
+        <h1 class="text-[24px] font-bold">Tech.</h1>
+
+        <!-- MENU CENTER -->
+        <div class="hidden md:flex gap-10 absolute left-1/2 -translate-x-1/2">
+          <a
+            href="#about"
+            class="text-[14px] text-white hover:text-violet-500 transition duration-300"
+            >About</a
+          >
+          <a
+            href="#service"
+            class="text-[14px] text-white hover:text-violet-500 transition duration-300"
+            >Service</a
+          >
+          <a
+            href="#ourWork"
+            class="text-[14px] text-white hover:text-violet-500 transition duration-300"
+            >Our Work</a
+          >
+          <a
+            href="#team"
+            class="text-[14px] text-white hover:text-violet-500 transition duration-300"
+            >Team</a
+          >
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="flex items-center">
+          <!-- DESKTOP BUTTON -->
+          <button
+            class="hidden md:flex w-[160px] h-[44px] text-[16px] font-semibold bg-[#421ABC] hover:bg-violet-700 transition duration-300 rounded-full justify-center items-center cursor-pointer text-white"
+          >
+            Contact Us
+          </button>
+
+          <!-- HAMBURGER -->
+          <button id="menu-btn" class="md:hidden text-3xl cursor-pointer">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-5 mt-5">
+        <a href="#about" class="text-[14px] text-white hover:text-violet-500"
+          >About</a
+        >
+        <a
+          href="#service"
+          class="text-[14px] text-white hover:text-violet-500 transition duration-300"
+          >Service</a
+        >
+        <a
+          href="#ourWork"
+          class="text-[14px] text-white hover:text-violet-500 transition duration-300"
+          >Our Work</a
+        >
+        <a
+          href="#team"
+          class="text-[14px] text-white hover:text-violet-500 transition duration-300"
+          >Team</a
+        >
+
+        <button
+          class="w-full h-[44px] text-[16px] font-semibold bg-[#421ABC] hover:bg-violet-700 transition duration-300 rounded-full flex justify-center items-center cursor-pointer text-white"
+        >
+          Contact Us
+        </button>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <header
+      class="mx-auto px-10 pt-10 bg-gradient-to-t from-violet-950 to-transparent"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-around items-center md:px-30"
+      >
+        <div class="flex flex-col gap-5">
+          <h1 class="font-bold md:text-5xl text-[40px]">
+            Build with the <span class="italic">Future.</span>
+          </h1>
+
+          <p class="text-[20px] md:text-xl text-neutral-500 leading-relaxed">
+            From building sleek websites and mobile apps to integrating AI
+            solutions, we help brands turn ideas into powerful digital
+            experiences that connect, engage, and scale.
+          </p>
+
+          <button
+            class="w-[300px] h-[48px] text-[16px] font-semibold bg-[#421ABC] hover:bg-violet-700 transition duration-300 rounded-full flex justify-center items-center cursor-pointer text-white"
+          >
+            Let's Talk
+          </button>
+        </div>
+
+        <img src="assets/image/image1.svg" alt="image" class="w-[590px]" />
+      </div>
+    </header>
+
+    <!-- who we are -->
+    <main
+      id="about"
+      class="container mx-auto p-10 flex flex-col justify-center items-center gap-5"
+    >
+      <h1 class="text-[28px] md:text-[40px] font-bold text-center">
+        Who We Are
+      </h1>
+      <p class="text-center md:text-[32px] text-[18px] md:px-10">
+        <span class="text-gray-500"
+          >We're a group of tech students trained in</span
+        >
+        building real-world digital products.
+        <span class="text-gray-500">From coding to design, we</span> craft
+        modern solutions for modern problems.
+      </p>
+    </main>
+
+    <!-- what we do -->
+    <section
+      id="service"
+      class="container mx-auto p-5 flex flex-col justify-center items-center gap-5"
+    >
+      <div
+        class="container mx-auto p-5 flex flex-col justify-center items-center gap-5"
+      >
+        <h1 class="text-[28px] md:text-[40px] font-bold text-center">
+          What We Do
+        </h1>
+        <p class="text-center text-[18px] text-gray-500">
+          We offer simple tech solutions to help your ideas grow.
+        </p>
+      </div>
+
+      <!-- icon -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+        <div
+          class="flex flex-col justify-center items-center gap-5 bg-neutral-900 w-full h-[280px] md:h-[214px] p-5"
+        >
+          <img src="assets/icon/website.svg" alt="Website Icon" />
+          <h1 class="text-[20px] text-center">Web Development</h1>
+          <p class="text-[16px] text-gray-500 text-center">
+            Modern websites using HTML, CSS, JavaScript, and frameworks.
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-5 bg-neutral-900 w-full h-[280px] md:h-[214px] p-5"
+        >
+          <img src="assets/icon/mobile.svg" alt="Mobile Icon" />
+          <h1 class="text-[20px] text-center">App Development</h1>
+          <p class="text-[16px] text-gray-500 text-center">
+            Mobile and desktop apps tailored for your needs
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-5 bg-neutral-900 w-full h-[280px] md:h-[214px] p-5"
+        >
+          <img src="assets/icon/aI.svg" alt="AI Icon" />
+          <h1 class="text-[20px] text-center">AI Integration</h1>
+          <p class="text-[16px] text-gray-500 text-center">
+            Smart solutions using AI-powered tools and automation.
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-5 bg-neutral-900 w-full h-[280px] md:h-[214px] p-5"
+        >
+          <img src="assets/icon/paint.svg" alt="UI/UX Icon" />
+          <h1 class="text-[20px] text-center">UI/UX Design</h1>
+          <p class="text-[16px] text-gray-500 text-center">
+            Clean and functional designs for better user experience.
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-5 bg-neutral-900 w-full h-[280px] md:h-[214px] p-5"
+        >
+          <img src="assets/icon/landingPage.svg" alt="Landing Page Icon" />
+          <h1 class="text-[20px] text-center">Landing Page Design</h1>
+          <p class="text-[16px] text-gray-500 text-center">
+            High-converting landing pages for your product or business.
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-5 bg-neutral-900 w-full h-[280px] md:h-[214px] p-5"
+        >
+          <img src="assets/icon/cms.svg" alt="CMS Icon" />
+          <h1 class="text-[20px] text-center">CMS Integration</h1>
+          <p class="text-[16px] text-gray-500 text-center">
+            Easy-to-manage websites with WordPress or Webflow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- our work -->
+    <section
+      id="ourWork"
+      class="container mx-auto p-5 flex flex-col justify-center items-center gap-5"
+    >
+      <div
+        class="container mx-auto p-5 flex flex-col justify-center items-center gap-5"
+      >
+        <h1 class="text-[28px] md:text-[40px] font-bold text-center">
+          Our Work
+        </h1>
+        <p class="text-center text-[18px] text-gray-500">
+          See what we’ve built with passion and purpose
+        </p>
+      </div>
+
+      <!-- portofolio -->
+      <div
+        class="w-full mx-auto p-5 flex flex-col md:flex-row justify-center items-center gap-10"
+      >
+        <div class="flex flex-col gap-5">
+          <img src="assets/portofolio/portofolio1.svg" alt="Portofolio 1" />
+          <h1 class="text-[15px]">Portofolio 1</h1>
+        </div>
+        <div class="flex flex-col gap-5">
+          <img src="assets/portofolio/portofolio2.svg" alt="Portofolio 2" />
+          <h1 class="text-[15px]">Portofolio 2</h1>
+        </div>
+        <div class="flex flex-col gap-5">
+          <img src="assets/portofolio/portofolio3.svg" alt="Portofolio 3" />
+          <h1 class="text-[15px]">Portofolio 3</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- meet the team -->
+    <section
+      id="team"
+      class="container mx-auto p-5 flex flex-col justify-center items-center gap-5"
+    >
+      <div
+        class="container mx-auto p-5 flex flex-col justify-center items-center gap-5"
+      >
+        <h1 class="text-[28px] md:text-[40px] font-bold text-center">
+          Meet The Team
+        </h1>
+        <p class="text-center text-[18px] text-gray-500">
+          A group of future-ready tech makers.
+        </p>
+      </div>
+
+      <!-- the team -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-20">
+        <div class="flex flex-col justify-center items-center gap-5">
+          <img src="assets/foto/foto1.svg" alt="Photo 1" />
+          <h1 class="text-[20px] font-bold">Jasper Kim</h1>
+          <p class="text-gray-500 text-[16px]">Project Manager</p>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-5">
+          <img src="assets/foto/foto2.svg" alt="Photo 2" />
+          <h1 class="text-[20px] font-bold whitespace-nowrap">Alex Jonathan</h1>
+          <p class="text-gray-500 text-[16px] whitespace-nowrap">
+            Full-stack Developer
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-5">
+          <img src="assets/foto/foto3.svg" alt="Photo 3" />
+          <h1 class="text-[20px] font-bold">Mario Lopez</h1>
+          <p class="text-gray-500 text-[16px]">UI/UX Designer</p>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-5">
+          <img src="assets/foto/foto4.svg" alt="Photo 4" />
+          <h1 class="text-[20px] font-bold">James Kwee</h1>
+          <p class="text-gray-500 text-[16px]">Data Scientist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- form -->
+    <section class="container mx-auto p-5">
+      <div class="max-w-2xl mx-auto">
+        <!-- TITLE -->
+        <div
+          class="container mx-auto p-5 flex flex-col justify-center items-center gap-5"
+        >
+          <h1 class="text-[28px] md:text-[40px] font-bold text-center">
+            Let’s Collaborate
+          </h1>
+          <p class="text-center text-[18px] text-gray-500">
+            Need a tech team? We're ready to help
+          </p>
+        </div>
+
+        <!-- FORM -->
+        <form class="flex flex-col gap-5">
+          <!-- NAME -->
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Name</label>
+
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full h-14 px-5 rounded-xl bg-neutral-900 border border-neutral-700 focus:outline-none focus:border-violet-600 transition"
+            />
+          </div>
+
+          <!-- EMAIL -->
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Email</label>
+
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full h-14 px-5 rounded-xl bg-neutral-900 border border-neutral-700 focus:outline-none focus:border-violet-600 transition"
+            />
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Message</label>
+
+            <textarea
+              rows="6"
+              placeholder="Write your message..."
+              class="w-full p-5 rounded-xl bg-neutral-900 border border-neutral-700 focus:outline-none focus:border-violet-600 transition resize-none"
+            ></textarea>
+          </div>
+
+          <!-- BUTTON -->
+          <button
+            type="submit"
+            class="w-full h-14 bg-[#421ABC] hover:bg-violet-700 rounded-full font-semibold transition duration-300"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="container mx-auto p-5">
+      <hr class="border-gray-700 my-5" />
+      <p class="text-gray-500 text-center text-[13px] md:text-[14px]">
+        © 2025 Web Programming Hack. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // GANTI ICON
+        if (mobileMenu.classList.contains("hidden")) {
+          menuBtn.innerHTML = "☰";
+        } else {
+          menuBtn.innerHTML = "✕";
+        }
+      });
+    </script>
+  </body>
+</html>
